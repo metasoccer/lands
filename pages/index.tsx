@@ -95,7 +95,7 @@ const Home: NextPage = () => {
                 ))}
               </div>
             ) : (
-              <p>You don't have Land Tickets...</p>
+              <p>You don&apos;t have Land Tickets...</p>
             )
           ) : (
             <p>Loading...</p>
