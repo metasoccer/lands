@@ -1,0 +1,164 @@
+.absolute {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.84);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 0 24px;
+  overflow: hidden;
+}
+
+.pageContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  max-width: 600px;
+  width: 100%;
+  gap: 2%;
+  padding: 3rem;
+}
+
+.secondaryButton {
+  cursor: pointer;
+  text-align: center;
+  padding: 5px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.mainButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  white-space: nowrap;
+  vertical-align: middle;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  line-height: 1;
+  font-weight: 600;
+  transition: background-color 200ms, border-color 200ms, color 200ms, fill 200ms, stroke 200ms, opacity 200ms, box-shadow 200ms, transform 200ms;
+  height: 3rem;
+  min-width: 3rem;
+  font-size: 0.75rem;
+  background: #e5e5ea;
+  background-image: linear-gradient(to left, #cc25b3 0%, #418dff 101.52%);
+  color: #fff;
+  width: 180px;
+  text-align: center;
+  border-radius: 9999px;
+  border-style: none;
+}
+
+.mainButton:hover {
+  opacity: 0.8;
+}
+
+.collectionContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1366px;
+}
+
+.divider {
+  width: 50%;
+  border-color: grey;
+  opacity: 0.25;
+}
+
+.nftBoxGrid {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1%;
+  flex-wrap: wrap;
+  width: 1200px;
+  max-width: 100%;
+}
+
+.nftBox {
+  width: 20%;
+  min-height: 200px;
+  border: 1px solid #333;
+  border-radius: 16px;
+  padding-bottom: 1em;
+  overflow: hidden;
+}
+
+.nftBox button {
+  padding: 0 !important;
+}
+
+.nftBox img {
+  width: 100% !important;
+  height: auto !important;
+  object-fit: cover !important;
+}
+
+/* iPad Breakpoints */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .nftBox {
+    width: 30%;
+  }
+}
+
+/* iPhone Breakpoints */
+@media only screen and (max-width: 767px) {
+  .nftBox {
+    width: 100%;
+  }
+}
+
+.spacerTop {
+  margin-top: 16px;
+}
+
+.bigSpacerTop {
+  margin-top: 32px;
+}
+
+.spacerBottom {
+  margin-bottom: 16px;
+}
+
+.detailPageContainer {
+  max-width: 800px;
+}
+
+.detailPageHr {
+  margin-top: 0;
+  margin-bottom: 32px;
+}
+
+.lightPurple {
+  color: #e011a7;
+}
+
+.nftMedia {
+  width: 100%;
+  max-height: 300px;
+}
+
+.noGapBottom {
+  margin-bottom: 0;
+}
+
+.centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
