@@ -1,5 +1,7 @@
 import {
   ConnectEmbed,
+  ConnectWallet,
+  NFT,
   ThirdwebNftMedia,
   useAddress,
   useContract,
@@ -8,7 +10,7 @@ import {
   Web3Button,
 } from "@thirdweb-dev/react";
 import type { NextPage } from "next";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Zoom } from "react-awesome-reveal";
 import ConfettiExplosion from "react-confetti-explosion";
 
@@ -19,55 +21,76 @@ import styles from "../styles/Home.module.css";
 const Home: NextPage = () => {
   const address = useAddress();
 
-  const [opening, setOpening] = useState(false);
+  const [isOpening, setIsOpening] = useState(false);
+  const [redeemableNfts, setRedeemableNfts] = useState<NFT[]>([]);
   const [reward, setReward] = useState<{ tokenId: any } | null>(null);
 
   const { contract: packContract } = useContract("0xc57d3D3A27cEf85c307d05EE6f45c1e10356172e", "pack");
   const { contract: landContract } = useContract("0xf2bBea4303629499ab0e088CE718791b027de49f", "nft-collection");
   const { contract: landTicketContract } = useContract("0x7603d3f8617762a4c3CD0B4fa4eB2c25FaD860f6", "nft-collection");
 
-  // @ts-ignore
-  const { data: landTickets = [], isLoading: isLoadingTickets } = useOwnedNFTs(landTicketContract, address, { enabled: !opening });
-  // @ts-ignore
-  const { data: lands = [] } = useOwnedNFTs(landContract, address, { enabled: !opening });
-  // @ts-ignore
-  const { data: packs = [], isLoading: isLoadingPacks } = useOwnedNFTs(packContract, address, { enabled: !opening });
+  const { data: landTickets = [], isLoading: isLoadingTickets } = useOwnedNFTs(landTicketContract, address);
+  const { data: lands = [] } = useOwnedNFTs(landContract, address);
+  const { data: packs = [], isLoading: isLoadingPacks } = useOwnedNFTs(packContract, address);
   const { data: rewardNft } = useNFT(landContract, reward?.tokenId);
+
+  const isLoading = isLoadingTickets || isLoadingPacks;
+
+  useEffect(() => {
+    if (reward?.tokenId == rewardNft?.metadata.id && rewardNft) {
+      setIsOpening(false);
+    }
+  }, [reward, rewardNft]);
+
+  useEffect(() => {
+    if (!isOpening) {
+      setRedeemableNfts([...landTickets, ...packs]);
+    }
+  }, [isOpening, landTickets, packs])
 
   if (!address) {
     return (
       <div className={styles.container} style={{ marginTop: 0 }}>
-        <ConnectEmbed />
+        <div className={styles.collectionContainer}>
+          <ConnectEmbed
+            showThirdwebBranding={false}  
+          />
+
+          <div className={styles.footer}>
+            Made with &lt;3 for MetaSoccer&apos;s community
+          </div>
+
+          <div className={styles.header}>
+            <img alt="MetaSoccer" src="https://assets.metasoccer.com/metasoccer-logo.svg" height={24} />
+          </div>
+        </div>
       </div>
     );
   }
 
-  const isLoading = isLoadingTickets || isLoadingPacks;
-  const redeemableNfts = [...landTickets, ...packs];
-
   return (
-    <div>
-      <div className={styles.container} style={{ marginTop: 0 }}>
-        <div className={styles.collectionContainer}>
-          {!isLoading ? (
-            redeemableNfts?.length ? (
-              <div className={styles.nftBoxGrid}>
-                {redeemableNfts?.map((nft, index) => (
-                  <div className={styles.nftBox} key={nft.metadata.id.toString()}>
-                    <ThirdwebNftMedia
-                      // @ts-ignore
-                      metadata={{
-                        ...nft.metadata,
-                        image: `${nft.metadata.image}`,
-                      }}
-                      className={styles.nftMedia}
-                    />
-                    <h3>{nft.metadata.name}</h3>
+    <div className={styles.container} style={{ marginTop: 0 }}>
+      <div className={styles.collectionContainer}>
+        {!isLoading ? (
+          redeemableNfts?.length ? (
+            <div className={styles.nftBoxGrid}>
+              {redeemableNfts?.map((nft, index) => (
+                <div className={styles.nftBox} key={nft.metadata.id.toString()}>
+                  <ThirdwebNftMedia
+                    // @ts-ignore
+                    metadata={{
+                      ...nft.metadata,
+                      image: `${nft.metadata.image}`,
+                    }}
+                    className={styles.nftMedia}
+                  />
+                  <h3>{nft.metadata.name}</h3>
 
-                    <Web3Button
-                      contractAddress="0x0A7cFB6cC31E03a03F66C849016D447645bD4B38"
-                      contractAbi={LandRedeemerAbi}
-                      action={async (contract) => {
+                  <Web3Button
+                    contractAddress="0x0A7cFB6cC31E03a03F66C849016D447645bD4B38"
+                    contractAbi={LandRedeemerAbi}
+                    action={async (contract) => {
+                      try {
                         const contractAddress = contract.getAddress();
                         
                         const isApproved = await landTicketContract!.isApproved(address, contractAddress);
@@ -75,52 +98,63 @@ const Home: NextPage = () => {
                           await landTicketContract!.setApprovalForAll(contractAddress, true);
                         }
 
+                        setIsOpening(true);
+
                         if (index < landTickets.length) {
                           await contract.call("redeemTicket", [nft.metadata.id, 0]);
                         }
 
-                        setOpening(true);
                         const opened = await packContract?.open(0, 1, 4200000);
-                        setOpening(false);
 
                         const rewards = opened?.erc721Rewards ?? [];
                         if (rewards.length) {
                           setReward(rewards[0]);
                         }
-                      }}
-                    >
-                      Open
-                    </Web3Button>
-                  </div>
-                ))}
-              </div>
-            ) : (
-              <p>You don&apos;t have Land Tickets...</p>
-            )
+                      } catch (err) {
+                        setIsOpening(false);
+                      }
+                    }}
+                  >
+                    Open
+                  </Web3Button>
+                </div>
+              ))}
+            </div>
           ) : (
-            <p>Loading...</p>
-          )}
-
-          {reward?.tokenId == rewardNft?.metadata.id && rewardNft && (
-            <div className={styles.absolute} onClick={() => setReward(null)}>
-              <Zoom>
-                <ConfettiExplosion
-                  particleCount={300}
-                />
-                <ThirdwebNftMedia
-                  // @ts-ignore
-                  metadata={{
-                    ...rewardNft.metadata,
-                    image: `${rewardNft.metadata.image}`,
-                  }}
-                  className={styles.nftMedia}
-                />
-                <h3>Congrats! You got {rewardNft.metadata.name}!</h3>
-              </Zoom>
-          </div>
+            <p>You don&apos;t have Land Tickets...</p>
+          )
+        ) : (
+          <p>Loading...</p>
         )}
+
+        <div className={styles.footer}>
+          Made with &lt;3 for MetaSoccer&apos;s community
+        </div>
+
+        <div className={styles.header}>
+          <img alt="MetaSoccer" src="https://assets.metasoccer.com/metasoccer-logo.svg" height={24} />
+          <ConnectWallet />
         </div>
       </div>
+
+      {reward?.tokenId == rewardNft?.metadata.id && rewardNft && (
+        <div className={styles.absolute} onClick={() => setReward(null)}>
+          <Zoom>
+            <ConfettiExplosion
+              particleCount={300}
+            />
+            <ThirdwebNftMedia
+              // @ts-ignore
+              metadata={{
+                ...rewardNft.metadata,
+                image: `${rewardNft.metadata.image}`,
+              }}
+              className={styles.nftMedia}
+            />
+            <h3>Congrats! You got {rewardNft.metadata.name}!</h3>
+          </Zoom>
+        </div>
+      )}
     </div>
   );
 };
