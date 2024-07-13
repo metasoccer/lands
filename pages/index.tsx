@@ -18,6 +18,8 @@ import { abi as LandRedeemerAbi } from "../abis/LandRedeemer";
 
 import styles from "../styles/Home.module.css";
 
+const REDEEMER_CONTRACT_ADDRESS = "0xfb12278D4C3BB9651e45Be37dC8156a1DB9AbE45";
+
 const Home: NextPage = () => {
   const address = useAddress();
 
@@ -25,9 +27,9 @@ const Home: NextPage = () => {
   const [redeemableNfts, setRedeemableNfts] = useState<NFT[]>([]);
   const [reward, setReward] = useState<{ tokenId: any } | null>(null);
 
-  const { contract: packContract } = useContract("0xc57d3D3A27cEf85c307d05EE6f45c1e10356172e", "pack");
-  const { contract: landContract } = useContract("0xf2bBea4303629499ab0e088CE718791b027de49f", "nft-collection");
-  const { contract: landTicketContract } = useContract("0x7603d3f8617762a4c3CD0B4fa4eB2c25FaD860f6", "nft-collection");
+  const { contract: packContract } = useContract("0xA6AafDD9e8B77FEbb96bf60E853a905770a7EbD3", "pack");
+  const { contract: landContract } = useContract("0x5b40f62fE5Dd53Ec89D82D432c05B9eD79764C5A", "nft-collection");
+  const { contract: landTicketContract } = useContract("0x1C80e3D799eBf28E47C488EcdABd7ea47B5d8595", "nft-collection");
 
   const { data: landTickets = [], isLoading: isLoadingTickets } = useOwnedNFTs(landTicketContract, address);
   const { data: lands = [] } = useOwnedNFTs(landContract, address);
@@ -87,7 +89,7 @@ const Home: NextPage = () => {
                   <h3>{nft.metadata.name}</h3>
 
                   <Web3Button
-                    contractAddress="0x0A7cFB6cC31E03a03F66C849016D447645bD4B38"
+                    contractAddress={REDEEMER_CONTRACT_ADDRESS}
                     contractAbi={LandRedeemerAbi}
                     action={async (contract) => {
                       try {
@@ -144,14 +146,14 @@ const Home: NextPage = () => {
               particleCount={300}
             />
             <ThirdwebNftMedia
-              // @ts-ignore
               metadata={{
                 ...rewardNft.metadata,
                 image: `${rewardNft.metadata.image}`,
               }}
               className={styles.nftMedia}
             />
-            <h3>Congrats! You got {rewardNft.metadata.name}!</h3>
+            {/* @ts-ignore */}
+            <h3>Congrats! You got {rewardNft.metadata.attributes.find((attr) => attr.trait_type === "Name")?.value}!</h3>
           </Zoom>
         </div>
       )}
