@@ -1,0 +1,842 @@
+{
+  "AFG.json": {
+    "type": "BigNumber",
+    "hex": "0x00"
+  },
+  "AIA.json": {
+    "type": "BigNumber",
+    "hex": "0x01"
+  },
+  "ALB.json": {
+    "type": "BigNumber",
+    "hex": "0x02"
+  },
+  "ALG.json": {
+    "type": "BigNumber",
+    "hex": "0x03"
+  },
+  "AND.json": {
+    "type": "BigNumber",
+    "hex": "0x04"
+  },
+  "ANG.json": {
+    "type": "BigNumber",
+    "hex": "0x05"
+  },
+  "ARG.json": {
+    "type": "BigNumber",
+    "hex": "0x06"
+  },
+  "ARM.json": {
+    "type": "BigNumber",
+    "hex": "0x07"
+  },
+  "ARU.json": {
+    "type": "BigNumber",
+    "hex": "0x08"
+  },
+  "ASA.json": {
+    "type": "BigNumber",
+    "hex": "0x09"
+  },
+  "ATG.json": {
+    "type": "BigNumber",
+    "hex": "0x0a"
+  },
+  "AUS.json": {
+    "type": "BigNumber",
+    "hex": "0x0b"
+  },
+  "AUT.json": {
+    "type": "BigNumber",
+    "hex": "0x0c"
+  },
+  "AZE.json": {
+    "type": "BigNumber",
+    "hex": "0x0d"
+  },
+  "BAH.json": {
+    "type": "BigNumber",
+    "hex": "0x0e"
+  },
+  "BAN.json": {
+    "type": "BigNumber",
+    "hex": "0x0f"
+  },
+  "BDI.json": {
+    "type": "BigNumber",
+    "hex": "0x10"
+  },
+  "BEL.json": {
+    "type": "BigNumber",
+    "hex": "0x11"
+  },
+  "BEN.json": {
+    "type": "BigNumber",
+    "hex": "0x12"
+  },
+  "BER.json": {
+    "type": "BigNumber",
+    "hex": "0x13"
+  },
+  "BFA.json": {
+    "type": "BigNumber",
+    "hex": "0x14"
+  },
+  "BHR.json": {
+    "type": "BigNumber",
+    "hex": "0x15"
+  },
+  "BHU.json": {
+    "type": "BigNumber",
+    "hex": "0x16"
+  },
+  "BIH.json": {
+    "type": "BigNumber",
+    "hex": "0x17"
+  },
+  "BLR.json": {
+    "type": "BigNumber",
+    "hex": "0x18"
+  },
+  "BLZ.json": {
+    "type": "BigNumber",
+    "hex": "0x19"
+  },
+  "BOL.json": {
+    "type": "BigNumber",
+    "hex": "0x1a"
+  },
+  "BOT.json": {
+    "type": "BigNumber",
+    "hex": "0x1b"
+  },
+  "BRA.json": {
+    "type": "BigNumber",
+    "hex": "0x1c"
+  },
+  "BRB.json": {
+    "type": "BigNumber",
+    "hex": "0x1d"
+  },
+  "BRU.json": {
+    "type": "BigNumber",
+    "hex": "0x1e"
+  },
+  "BUL.json": {
+    "type": "BigNumber",
+    "hex": "0x1f"
+  },
+  "CAM.json": {
+    "type": "BigNumber",
+    "hex": "0x20"
+  },
+  "CAN.json": {
+    "type": "BigNumber",
+    "hex": "0x21"
+  },
+  "CAY.json": {
+    "type": "BigNumber",
+    "hex": "0x22"
+  },
+  "CGO.json": {
+    "type": "BigNumber",
+    "hex": "0x23"
+  },
+  "CHA.json": {
+    "type": "BigNumber",
+    "hex": "0x24"
+  },
+  "CHI.json": {
+    "type": "BigNumber",
+    "hex": "0x25"
+  },
+  "CHN.json": {
+    "type": "BigNumber",
+    "hex": "0x26"
+  },
+  "CIV.json": {
+    "type": "BigNumber",
+    "hex": "0x27"
+  },
+  "CMR.json": {
+    "type": "BigNumber",
+    "hex": "0x28"
+  },
+  "COD.json": {
+    "type": "BigNumber",
+    "hex": "0x29"
+  },
+  "COK.json": {
+    "type": "BigNumber",
+    "hex": "0x2a"
+  },
+  "COL.json": {
+    "type": "BigNumber",
+    "hex": "0x2b"
+  },
+  "COM.json": {
+    "type": "BigNumber",
+    "hex": "0x2c"
+  },
+  "CPV.json": {
+    "type": "BigNumber",
+    "hex": "0x2d"
+  },
+  "CRC.json": {
+    "type": "BigNumber",
+    "hex": "0x2e"
+  },
+  "CRO.json": {
+    "type": "BigNumber",
+    "hex": "0x2f"
+  },
+  "CTA.json": {
+    "type": "BigNumber",
+    "hex": "0x30"
+  },
+  "CUB.json": {
+    "type": "BigNumber",
+    "hex": "0x31"
+  },
+  "CUW.json": {
+    "type": "BigNumber",
+    "hex": "0x32"
+  },
+  "CYP.json": {
+    "type": "BigNumber",
+    "hex": "0x33"
+  },
+  "CZE.json": {
+    "type": "BigNumber",
+    "hex": "0x34"
+  },
+  "DEN.json": {
+    "type": "BigNumber",
+    "hex": "0x35"
+  },
+  "DJI.json": {
+    "type": "BigNumber",
+    "hex": "0x36"
+  },
+  "DMA.json": {
+    "type": "BigNumber",
+    "hex": "0x37"
+  },
+  "DOM.json": {
+    "type": "BigNumber",
+    "hex": "0x38"
+  },
+  "ECU.json": {
+    "type": "BigNumber",
+    "hex": "0x39"
+  },
+  "EGY.json": {
+    "type": "BigNumber",
+    "hex": "0x3a"
+  },
+  "ENG.json": {
+    "type": "BigNumber",
+    "hex": "0x3b"
+  },
+  "EQG.json": {
+    "type": "BigNumber",
+    "hex": "0x3c"
+  },
+  "ESP.json": {
+    "type": "BigNumber",
+    "hex": "0x3d"
+  },
+  "EST.json": {
+    "type": "BigNumber",
+    "hex": "0x3e"
+  },
+  "ETH.json": {
+    "type": "BigNumber",
+    "hex": "0x3f"
+  },
+  "FIJ.json": {
+    "type": "BigNumber",
+    "hex": "0x40"
+  },
+  "FIN.json": {
+    "type": "BigNumber",
+    "hex": "0x41"
+  },
+  "FRA.json": {
+    "type": "BigNumber",
+    "hex": "0x42"
+  },
+  "FRO.json": {
+    "type": "BigNumber",
+    "hex": "0x43"
+  },
+  "GAB.json": {
+    "type": "BigNumber",
+    "hex": "0x44"
+  },
+  "GAM.json": {
+    "type": "BigNumber",
+    "hex": "0x45"
+  },
+  "GEO.json": {
+    "type": "BigNumber",
+    "hex": "0x46"
+  },
+  "GER.json": {
+    "type": "BigNumber",
+    "hex": "0x47"
+  },
+  "GHA.json": {
+    "type": "BigNumber",
+    "hex": "0x48"
+  },
+  "GIB.json": {
+    "type": "BigNumber",
+    "hex": "0x49"
+  },
+  "GNB.json": {
+    "type": "BigNumber",
+    "hex": "0x4a"
+  },
+  "GRE.json": {
+    "type": "BigNumber",
+    "hex": "0x4b"
+  },
+  "GRN.json": {
+    "type": "BigNumber",
+    "hex": "0x4c"
+  },
+  "GUA.json": {
+    "type": "BigNumber",
+    "hex": "0x4d"
+  },
+  "GUI.json": {
+    "type": "BigNumber",
+    "hex": "0x4e"
+  },
+  "GUM.json": {
+    "type": "BigNumber",
+    "hex": "0x4f"
+  },
+  "GUY.json": {
+    "type": "BigNumber",
+    "hex": "0x50"
+  },
+  "HAI.json": {
+    "type": "BigNumber",
+    "hex": "0x51"
+  },
+  "HKG.json": {
+    "type": "BigNumber",
+    "hex": "0x52"
+  },
+  "HON.json": {
+    "type": "BigNumber",
+    "hex": "0x53"
+  },
+  "HUN.json": {
+    "type": "BigNumber",
+    "hex": "0x54"
+  },
+  "IDN.json": {
+    "type": "BigNumber",
+    "hex": "0x55"
+  },
+  "IND.json": {
+    "type": "BigNumber",
+    "hex": "0x56"
+  },
+  "IRL.json": {
+    "type": "BigNumber",
+    "hex": "0x57"
+  },
+  "IRN.json": {
+    "type": "BigNumber",
+    "hex": "0x58"
+  },
+  "IRQ.json": {
+    "type": "BigNumber",
+    "hex": "0x59"
+  },
+  "ISL.json": {
+    "type": "BigNumber",
+    "hex": "0x5a"
+  },
+  "ISR.json": {
+    "type": "BigNumber",
+    "hex": "0x5b"
+  },
+  "ITA.json": {
+    "type": "BigNumber",
+    "hex": "0x5c"
+  },
+  "JAM.json": {
+    "type": "BigNumber",
+    "hex": "0x5d"
+  },
+  "JOR.json": {
+    "type": "BigNumber",
+    "hex": "0x5e"
+  },
+  "JPN.json": {
+    "type": "BigNumber",
+    "hex": "0x5f"
+  },
+  "KAZ.json": {
+    "type": "BigNumber",
+    "hex": "0x60"
+  },
+  "KEN.json": {
+    "type": "BigNumber",
+    "hex": "0x61"
+  },
+  "KGZ.json": {
+    "type": "BigNumber",
+    "hex": "0x62"
+  },
+  "KOR.json": {
+    "type": "BigNumber",
+    "hex": "0x63"
+  },
+  "KOS.json": {
+    "type": "BigNumber",
+    "hex": "0x64"
+  },
+  "KSA.json": {
+    "type": "BigNumber",
+    "hex": "0x65"
+  },
+  "KUW.json": {
+    "type": "BigNumber",
+    "hex": "0x66"
+  },
+  "LAO.json": {
+    "type": "BigNumber",
+    "hex": "0x67"
+  },
+  "LBN.json": {
+    "type": "BigNumber",
+    "hex": "0x68"
+  },
+  "LBR.json": {
+    "type": "BigNumber",
+    "hex": "0x69"
+  },
+  "LBY.json": {
+    "type": "BigNumber",
+    "hex": "0x6a"
+  },
+  "LCA.json": {
+    "type": "BigNumber",
+    "hex": "0x6b"
+  },
+  "LES.json": {
+    "type": "BigNumber",
+    "hex": "0x6c"
+  },
+  "LIE.json": {
+    "type": "BigNumber",
+    "hex": "0x6d"
+  },
+  "LTU.json": {
+    "type": "BigNumber",
+    "hex": "0x6e"
+  },
+  "LUX.json": {
+    "type": "BigNumber",
+    "hex": "0x6f"
+  },
+  "LVA.json": {
+    "type": "BigNumber",
+    "hex": "0x70"
+  },
+  "MAC.json": {
+    "type": "BigNumber",
+    "hex": "0x71"
+  },
+  "MAD.json": {
+    "type": "BigNumber",
+    "hex": "0x72"
+  },
+  "MAR.json": {
+    "type": "BigNumber",
+    "hex": "0x73"
+  },
+  "MAS.json": {
+    "type": "BigNumber",
+    "hex": "0x74"
+  },
+  "MDA.json": {
+    "type": "BigNumber",
+    "hex": "0x75"
+  },
+  "MDV.json": {
+    "type": "BigNumber",
+    "hex": "0x76"
+  },
+  "MEX.json": {
+    "type": "BigNumber",
+    "hex": "0x77"
+  },
+  "MKD.json": {
+    "type": "BigNumber",
+    "hex": "0x78"
+  },
+  "MLI.json": {
+    "type": "BigNumber",
+    "hex": "0x79"
+  },
+  "MLT.json": {
+    "type": "BigNumber",
+    "hex": "0x7a"
+  },
+  "MNE.json": {
+    "type": "BigNumber",
+    "hex": "0x7b"
+  },
+  "MNG.json": {
+    "type": "BigNumber",
+    "hex": "0x7c"
+  },
+  "MOZ.json": {
+    "type": "BigNumber",
+    "hex": "0x7d"
+  },
+  "MRI.json": {
+    "type": "BigNumber",
+    "hex": "0x7e"
+  },
+  "MSR.json": {
+    "type": "BigNumber",
+    "hex": "0x7f"
+  },
+  "MTN.json": {
+    "type": "BigNumber",
+    "hex": "0x80"
+  },
+  "MWI.json": {
+    "type": "BigNumber",
+    "hex": "0x81"
+  },
+  "MYA.json": {
+    "type": "BigNumber",
+    "hex": "0x82"
+  },
+  "NAM.json": {
+    "type": "BigNumber",
+    "hex": "0x83"
+  },
+  "NCA.json": {
+    "type": "BigNumber",
+    "hex": "0x84"
+  },
+  "NCL.json": {
+    "type": "BigNumber",
+    "hex": "0x85"
+  },
+  "NED.json": {
+    "type": "BigNumber",
+    "hex": "0x86"
+  },
+  "NEP.json": {
+    "type": "BigNumber",
+    "hex": "0x87"
+  },
+  "NGA.json": {
+    "type": "BigNumber",
+    "hex": "0x88"
+  },
+  "NIG.json": {
+    "type": "BigNumber",
+    "hex": "0x89"
+  },
+  "NIR.json": {
+    "type": "BigNumber",
+    "hex": "0x8a"
+  },
+  "NOR.json": {
+    "type": "BigNumber",
+    "hex": "0x8b"
+  },
+  "NZL.json": {
+    "type": "BigNumber",
+    "hex": "0x8c"
+  },
+  "OMA.json": {
+    "type": "BigNumber",
+    "hex": "0x8d"
+  },
+  "PAK.json": {
+    "type": "BigNumber",
+    "hex": "0x8e"
+  },
+  "PAN.json": {
+    "type": "BigNumber",
+    "hex": "0x8f"
+  },
+  "PAR.json": {
+    "type": "BigNumber",
+    "hex": "0x90"
+  },
+  "PER.json": {
+    "type": "BigNumber",
+    "hex": "0x91"
+  },
+  "PHI.json": {
+    "type": "BigNumber",
+    "hex": "0x92"
+  },
+  "PLE.json": {
+    "type": "BigNumber",
+    "hex": "0x93"
+  },
+  "PNG.json": {
+    "type": "BigNumber",
+    "hex": "0x94"
+  },
+  "POL.json": {
+    "type": "BigNumber",
+    "hex": "0x95"
+  },
+  "POR.json": {
+    "type": "BigNumber",
+    "hex": "0x96"
+  },
+  "PRK.json": {
+    "type": "BigNumber",
+    "hex": "0x97"
+  },
+  "PUR.json": {
+    "type": "BigNumber",
+    "hex": "0x98"
+  },
+  "QAT.json": {
+    "type": "BigNumber",
+    "hex": "0x99"
+  },
+  "ROU.json": {
+    "type": "BigNumber",
+    "hex": "0x9a"
+  },
+  "RSA.json": {
+    "type": "BigNumber",
+    "hex": "0x9b"
+  },
+  "RUS.json": {
+    "type": "BigNumber",
+    "hex": "0x9c"
+  },
+  "RWA.json": {
+    "type": "BigNumber",
+    "hex": "0x9d"
+  },
+  "SAM.json": {
+    "type": "BigNumber",
+    "hex": "0x9e"
+  },
+  "SCO.json": {
+    "type": "BigNumber",
+    "hex": "0x9f"
+  },
+  "SDN.json": {
+    "type": "BigNumber",
+    "hex": "0xa0"
+  },
+  "SEN.json": {
+    "type": "BigNumber",
+    "hex": "0xa1"
+  },
+  "SEY.json": {
+    "type": "BigNumber",
+    "hex": "0xa2"
+  },
+  "SGP.json": {
+    "type": "BigNumber",
+    "hex": "0xa3"
+  },
+  "SKN.json": {
+    "type": "BigNumber",
+    "hex": "0xa4"
+  },
+  "SLE.json": {
+    "type": "BigNumber",
+    "hex": "0xa5"
+  },
+  "SLV.json": {
+    "type": "BigNumber",
+    "hex": "0xa6"
+  },
+  "SMR.json": {
+    "type": "BigNumber",
+    "hex": "0xa7"
+  },
+  "SOL.json": {
+    "type": "BigNumber",
+    "hex": "0xa8"
+  },
+  "SOM.json": {
+    "type": "BigNumber",
+    "hex": "0xa9"
+  },
+  "SRB.json": {
+    "type": "BigNumber",
+    "hex": "0xaa"
+  },
+  "SRI.json": {
+    "type": "BigNumber",
+    "hex": "0xab"
+  },
+  "SSD.json": {
+    "type": "BigNumber",
+    "hex": "0xac"
+  },
+  "STP.json": {
+    "type": "BigNumber",
+    "hex": "0xad"
+  },
+  "SUI.json": {
+    "type": "BigNumber",
+    "hex": "0xae"
+  },
+  "SUR.json": {
+    "type": "BigNumber",
+    "hex": "0xaf"
+  },
+  "SVK.json": {
+    "type": "BigNumber",
+    "hex": "0xb0"
+  },
+  "SVN.json": {
+    "type": "BigNumber",
+    "hex": "0xb1"
+  },
+  "SWE.json": {
+    "type": "BigNumber",
+    "hex": "0xb2"
+  },
+  "SWZ.json": {
+    "type": "BigNumber",
+    "hex": "0xb3"
+  },
+  "SYR.json": {
+    "type": "BigNumber",
+    "hex": "0xb4"
+  },
+  "TAH.json": {
+    "type": "BigNumber",
+    "hex": "0xb5"
+  },
+  "TAN.json": {
+    "type": "BigNumber",
+    "hex": "0xb6"
+  },
+  "TCA.json": {
+    "type": "BigNumber",
+    "hex": "0xb7"
+  },
+  "TGA.json": {
+    "type": "BigNumber",
+    "hex": "0xb8"
+  },
+  "THA.json": {
+    "type": "BigNumber",
+    "hex": "0xb9"
+  },
+  "TJK.json": {
+    "type": "BigNumber",
+    "hex": "0xba"
+  },
+  "TKM.json": {
+    "type": "BigNumber",
+    "hex": "0xbb"
+  },
+  "TLS.json": {
+    "type": "BigNumber",
+    "hex": "0xbc"
+  },
+  "TOG.json": {
+    "type": "BigNumber",
+    "hex": "0xbd"
+  },
+  "TPE.json": {
+    "type": "BigNumber",
+    "hex": "0xbe"
+  },
+  "TRI.json": {
+    "type": "BigNumber",
+    "hex": "0xbf"
+  },
+  "TUN.json": {
+    "type": "BigNumber",
+    "hex": "0xc0"
+  },
+  "TUR.json": {
+    "type": "BigNumber",
+    "hex": "0xc1"
+  },
+  "UAE.json": {
+    "type": "BigNumber",
+    "hex": "0xc2"
+  },
+  "UGA.json": {
+    "type": "BigNumber",
+    "hex": "0xc3"
+  },
+  "UKR.json": {
+    "type": "BigNumber",
+    "hex": "0xc4"
+  },
+  "URU.json": {
+    "type": "BigNumber",
+    "hex": "0xc5"
+  },
+  "USA.json": {
+    "type": "BigNumber",
+    "hex": "0xc6"
+  },
+  "UZB.json": {
+    "type": "BigNumber",
+    "hex": "0xc7"
+  },
+  "VAN.json": {
+    "type": "BigNumber",
+    "hex": "0xc8"
+  },
+  "VEN.json": {
+    "type": "BigNumber",
+    "hex": "0xc9"
+  },
+  "VGB.json": {
+    "type": "BigNumber",
+    "hex": "0xca"
+  },
+  "VIE.json": {
+    "type": "BigNumber",
+    "hex": "0xcb"
+  },
+  "VIN.json": {
+    "type": "BigNumber",
+    "hex": "0xcc"
+  },
+  "VIR.json": {
+    "type": "BigNumber",
+    "hex": "0xcd"
+  },
+  "WAL.json": {
+    "type": "BigNumber",
+    "hex": "0xce"
+  },
+  "YEM.json": {
+    "type": "BigNumber",
+    "hex": "0xcf"
+  },
+  "ZAM.json": {
+    "type": "BigNumber",
+    "hex": "0xd0"
+  },
+  "ZIM.json": {
+    "type": "BigNumber",
+    "hex": "0xd1"
+  }
+}

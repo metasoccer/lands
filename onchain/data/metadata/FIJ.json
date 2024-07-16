@@ -1,0 +1,15 @@
+{
+  "name": "MetaSoccer Land #168",
+  "description": "MetaSoccer Lands are unique NFTs, each representing one of the 210 FIFA countries. These lands offer exclusive ownership and significant opportunities within the MetaSoccer ecosystem.",
+  "image": "https://assets.metasoccer.com/lands/FIJ.png",
+  "attributes": [
+    {
+      "trait_type": "Country Code",
+      "value": "FIJ"
+    },
+    {
+      "trait_type": "Name",
+      "value": "Fiji"
+    }
+  ]
+}
