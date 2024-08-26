@@ -10,6 +10,7 @@ import {
   Web3Button,
 } from "@thirdweb-dev/react";
 import type { NextPage } from "next";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { Zoom } from "react-awesome-reveal";
 import ConfettiExplosion from "react-confetti-explosion";
@@ -28,7 +29,7 @@ const Home: NextPage = () => {
   const [reward, setReward] = useState<{ tokenId: any } | null>(null);
 
   const { contract: packContract } = useContract("0xA6AafDD9e8B77FEbb96bf60E853a905770a7EbD3", "pack");
-  const { contract: landContract } = useContract("0x5b40f62fE5Dd53Ec89D82D432c05B9eD79764C5A", "nft-collection");
+  const { contract: landContract } = useContract("0x5b40f62fe5dd53ec89d82d432c05b9ed79764c5a", "nft-collection");
   const { contract: landTicketContract } = useContract("0x1C80e3D799eBf28E47C488EcdABd7ea47B5d8595", "nft-collection");
 
   const { data: landTickets = [], isLoading: isLoadingTickets } = useOwnedNFTs(landTicketContract, address);
@@ -63,7 +64,7 @@ const Home: NextPage = () => {
           </div>
 
           <div className={styles.header}>
-            <img alt="MetaSoccer" src="https://assets.metasoccer.com/metasoccer-logo.svg" height={24} />
+            <Image alt="MetaSoccer" src="https://assets.metasoccer.com/metasoccer-logo.svg" height={24} width={120} className={styles.logo} />
           </div>
         </div>
       </div>
@@ -121,9 +122,22 @@ const Home: NextPage = () => {
                   </Web3Button>
                 </div>
               ))}
+              {lands?.map((nft, index) => (
+                <div className={styles.nftBox} key={nft.metadata.id.toString()}>
+                  <ThirdwebNftMedia
+                    // @ts-ignore
+                    metadata={{
+                      ...nft.metadata,
+                      image: `${nft.metadata.image}`,
+                    }}
+                    className={styles.nftMedia}
+                  />
+                  <h3>{nft.metadata.name}</h3>
+                </div>
+              ))}
             </div>
           ) : (
-            <p>You don&apos;t have Land Tickets...</p>
+            <p>You don&apos;t have Lands nor Land Tickets...</p>
           )
         ) : (
           <p>Loading...</p>
@@ -134,7 +148,7 @@ const Home: NextPage = () => {
         </div>
 
         <div className={styles.header}>
-          <img alt="MetaSoccer" src="https://assets.metasoccer.com/metasoccer-logo.svg" height={24} />
+          <Image alt="MetaSoccer" src="https://assets.metasoccer.com/metasoccer-logo.svg" height={24} width={120} className={styles.logo} />
           <ConnectWallet />
         </div>
       </div>
