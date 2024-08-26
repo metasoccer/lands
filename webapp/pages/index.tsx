@@ -75,7 +75,7 @@ const Home: NextPage = () => {
     <div className={styles.container} style={{ marginTop: 0 }}>
       <div className={styles.collectionContainer}>
         {!isLoading ? (
-          redeemableNfts?.length ? (
+          ((redeemableNfts?.length ?? 0) + (lands?.length ?? 0) > 0) ? (
             <div className={styles.nftBoxGrid}>
               {redeemableNfts?.map((nft, index) => (
                 <div className={styles.nftBox} key={nft.metadata.id.toString()}>
